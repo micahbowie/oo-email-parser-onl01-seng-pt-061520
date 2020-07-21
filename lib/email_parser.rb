@@ -1,20 +1,17 @@
-class EmailAddressParser
-  #attr_accessor :email_addresses
-  @list = []
-  
-  def initialize(emails)
-    email_addresses = emails
-    @list << email_addresses
-    #@list << email_addresses
-  end 
-    
-  def parse
-   # @list.join(",")
-  end 
+class EmailParser
+attr_accessor :emails 
 
+def initialize(emails)
+  @emails = emails
 end 
 
+def parse
+  puts splitEmail = emails.split.collect {|address| address.split(',')} 
+  returnArr = splitEmail.flatten.uniq
+  returnArr
+end
 
+end
 
 
 
